@@ -34,6 +34,10 @@
                 .listen('ChatMessageSent', (e) => {
                     console.log('Message received:', e);
                 });
+            Echo.channel("delivery")
+                .listen("PackageSent", (event) => {
+                    console.log(event);
+                });
         });
     </script>
 @endpush
